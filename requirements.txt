@@ -82,3 +82,4 @@ urllib3==2.6.3
 wcwidth==0.6.0
 widgetsnbextension==4.0.15
 torch-geometric
+faiss-cpu

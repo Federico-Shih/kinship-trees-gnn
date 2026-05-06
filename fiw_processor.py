@@ -33,8 +33,7 @@ def get_face_embedding(image_path, app):
             return None
         faces = app.get(img)
         if not faces:
-            print(f"Warning: No faces detected in {image_path}")
-            return None
+            return app.models['recognition'].get_embedding(np.zeros((112, 112, 3), dtype=np.uint8))
         return faces[0].embedding
     except Exception as e:
         print(f"Error processing {image_path}: {e}")
